@@ -6,7 +6,7 @@ namespace NoTextPulse {
 		public override void Load() {
 			if (Main.netMode == 2) { return; }
 			Main.mouseTextColor = 254;
-			On.Terraria.Main.DoUpdate_AnimateCursorColors += (DoUpdate_AnimateCursorColors) => {
+			Terraria.On_Main.DoUpdate_AnimateCursorColors += (DoUpdate_AnimateCursorColors) => {
 				Main.CursorColor();
 				Main.masterColor += (float)Main.masterColorDir * 0.05f;
 				if (Main.masterColor > 1f)
@@ -21,7 +21,7 @@ namespace NoTextPulse {
 				}
 				return;
 			};
-			On.Terraria.Main.CursorColor += (CursorColor) => {
+			Terraria.On_Main.CursorColor += (CursorColor) => {
 				Main.cursorColor = Main.mouseColor;
 				return;
 			};
