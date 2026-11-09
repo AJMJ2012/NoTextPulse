@@ -1,0 +1,3 @@
+Forces all text to no longer pulse.
+
+Also affects the cursor.
